@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="main">
+    <div id="box"onsubmit="return calculate()">
+<label for="">Enter Your First Value</label>
+<input id="fvalue" type="text" name="first value"></br>
+<select name="">
+  <option  value="add">+</option>
+  <option value="substract">-</option>
+  <option value="divide">/</option>
+  <option value="multiply">*</option>
+</select></br>
+
+<label for="">Enter Your Second Value</label>
+<input id="svalue" type="text" name="second value"></br>
+<button>Calculate</button>
+
+    </div>
+</div>
+
+
+
+    <script>
+     const btn = document.querySelector("button");
+        const a = document.getElementById("fvalue")
+        const b = document.getElementById("svalue")
+        const select = document.querySelector("select")
+        console.log(select)
+        btn.addEventListener("click", () =>{
+            if (select.value === "add") {
+                console.log(Number(a.value )+Number( b.value))
+            }
+            else if (select.value === "substract") {
+                console.log(Number(a.value)-Number( b.value))
+            }
+            else if (select.value === "divide") {
+                console.log(Number(a.value)/Number( b.value))
+            }
+            else if (select.value === "multiply") {
+                console.log(Number(a.value )* Number( b.value))
+            }})
+  </script>
+</body>
+</html>
